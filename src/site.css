@@ -1,0 +1,770 @@
+/***************************************************
+
+****** Ballin' Web Fonts ******
+
+*** URL: http://ballin.sashtown.de
+*** Author: Sascha Lack | http://sashtown.de
+
+****************************************************/
+
+
+
+/*
+ :::  Reset
+-------------------------------------------------- */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+
+
+
+/*
+ :::  Global
+-------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  min-height: 100%;
+  font-size: 95%;
+}
+@media only screen and (min-width : 45em) {
+  html {
+    font-size: 100%;
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  line-height: 1;
+  background-color: #eee;
+}
+section, header {
+  position: relative;
+}
+.inner {
+  margin: 0 auto;
+  padding: 6rem 1rem;
+  max-width: 70em;
+}
+@media only screen and (min-width : 40em) {
+  .inner {
+    padding: 8rem 2rem;
+  }
+}
+@media only screen and (min-width : 70em) {
+  .inner {
+    padding: 10rem 4rem;
+  }
+}
+
+
+
+/*
+ :::  Nav
+-------------------------------------------------- */
+nav {
+  display: none;
+}
+@media only screen and (min-width : 80em) {
+  nav {
+    display: block;
+    position: fixed;
+    padding: .5rem .4rem .5rem 0;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,.4);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: background-color .3s ease-out;
+  }
+  nav:hover {
+    background-color: rgba(0,0,0,.6);
+  }
+    nav li {
+      display: block;
+      padding: .3rem .6rem;
+    }
+      nav a {
+        display: block;
+        padding: .5rem;
+        background-color: rgba(255,255,255,.5);
+        transition: background-color .3s ease-out;
+      }
+      nav a:hover {
+        background-color: rgba(255,255,255,.7);
+      }
+        nav div {
+          position: absolute;
+          padding: 1rem 2.5rem 1rem 1rem;
+          top: 0;
+          right: 100%;
+          z-index: 9999;
+          border-right: 1px solid rgba(255,255,255,.1);
+          color: rgba(255,255,255,.7);
+          background-color: rgba(0,0,0,.6);
+          pointer-events: none;
+          opacity: 0;
+          white-space: nowrap;
+          -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+          transition: transform .6s, opacity .3s;
+        }
+        nav a:hover div {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+          nav b {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding-bottom: .5rem;
+            font-size: .9rem;
+            font-weight: 300;
+            border-bottom: 1px solid rgba(255,255,255,.2);
+          }
+          nav span {
+            display: block;
+            margin-top: .5rem;
+            font-size: .9rem;
+          }
+          nav span:before {
+            content: '\22EF';
+            margin-right: .3rem;
+          }
+          nav p {
+            font-size: 1.5rem;
+          }
+          nav a[href="#krankl"] p {
+            font-family: 'PT Serif', serif;
+          }
+          nav a[href="#brehme"] p {
+            font-family: 'Oswald', sans-serif;
+          }
+          nav a[href="#loddar"] p {
+            font-family: 'Raleway', sans-serif;
+          }
+          nav a[href="#trap"] p {
+            font-family: 'Lora', serif;
+          }
+          nav a[href="#breitner"] p {
+            font-family: 'Ubuntu Mono', sans-serif;
+          }
+          nav a[href="#rethy"] p {
+            font-family: 'Economica', sans-serif;
+          }
+          nav a[href="#ballack"] p {
+            font-family: 'Roboto', sans-serif;
+          }
+          nav a[href="#kaiser"] p {
+            font-family: 'Courgette', serif;
+          }
+          nav a[href="#strasser"] p {
+            font-family: 'Lato', sans-serif;
+          }
+          nav a[href="#basler"] p {
+            font-family: 'Josefin Slab', serif;
+          }
+          nav a[href="#merte"] p {
+            font-family: 'Bitter', Georgia, serif;
+          }
+}
+
+
+
+/*
+ :::  Basics
+-------------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+blockquote cite {
+  display: block;
+  font-style: normal;
+}
+
+
+
+/*
+ :::  Info box
+-------------------------------------------------- */
+.info {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: inherit;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: text-shadow .3s ease-out;
+}
+  .info:hover {
+    text-shadow: 2px 2px rgba(30,30,30,.1);
+  }
+  .info b {
+    display: block;
+    position: relative;
+    padding: .5rem 1rem;
+    color: #fff;
+    font-weight: 800;
+    background-color: rgba(90,90,90,.15);
+    font-family: 'Open Sans', sans-serif;
+  }
+  .info span {
+    position: absolute;
+    padding: .5rem 1rem;
+    left: 50%;
+    z-index: 9999;
+    color: #fff;
+    text-align: center;
+    background: rgba(90,90,90,.15);
+    opacity: 0;
+    white-space: nowrap;
+    -webkit-transform: translate(-50%, -8rem);
+    transform: translate(-50%, -8rem);
+    transition: transform .3s, opacity .3s;
+  }
+  .info span:before,
+  .info span:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .info span:after {
+    bottom: -10px;
+    margin-left: -10px;
+    border-top: 10px solid rgba(90,90,90,.15);
+  }
+  .info:hover span {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -5rem);
+    transform: translate(-50%, -5rem);
+  }
+
+/**
+  Light info box
+*/
+.info.light b,
+.info.light span {
+  background-color: rgba(255,255,255,.1);
+}
+.info.light span:after {
+  border-top: 10px solid rgba(255,255,255,.1);
+}
+
+
+
+/*
+ :::  Header
+-------------------------------------------------- */
+.site-header {
+  text-align: center;
+}
+  .site-header .inner {
+    max-width: 60em;
+  }
+  .site-header h1 {
+    font-size: 3.1rem;
+    line-height: 1.1;
+    font-weight: 800;
+    text-shadow: 5px 5px rgba(0,0,0,.1);
+  }
+  .site-header p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-shadow: 2px 2px rgba(0,0,0,.1);
+  }
+  .site-header p:before {
+    content: '';
+    margin: 1rem auto;
+    display: block;
+    height: 8px;
+    width: 100%;
+    background-color: #444;
+    box-shadow: 4px 4px rgba(0,0,0,.1);
+  }
+@media only screen and (min-width : 40em) {
+  .site-header h1 {
+    font-size: 5rem;
+  }
+  .site-header p {
+    font-size: 1.9rem;
+  }
+}
+
+
+
+/*
+ :::  Hans Krankl
+-------------------------------------------------- */
+.krankl {
+  font-family: 'Noto Serif', serif;
+  color: rgba(255,255,255,.6);
+  background-color: #458699;
+  text-align: center;
+}
+.krankl .inner {
+  max-width: 60em;
+}
+  .krankl p {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .krankl cite {
+    margin-top: 2.5rem;
+    color: #458699;
+  }
+    .krankl cite span {
+      padding: .5rem 1rem;
+      border-radius: 2rem;
+      background-color: rgba(255,255,255,.6);
+    }
+@media only screen and (min-width : 40em) {
+  .krankl p {
+    font-size: 4rem;
+  }
+  .krankl cite {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+/*
+ ::: Andrea Brehme
+-------------------------------------------------- */
+.brehme {
+  font-family: 'Oswald', sans-serif;
+  background-color: #95af7a;
+  color: #fff;
+  text-align: center;
+}
+  .brehme .inner {
+    text-shadow: 2px 2px rgba(0,0,0,.1);
+  }
+  .brehme p {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  .brehme cite {
+    font-weight: 300;
+  }
+@media only screen and (min-width : 40em) {
+  .brehme p {
+    font-size: 3rem;
+  }
+  .brehme cite {
+    font-size: 1.25rem;
+  }
+}
+
+
+
+/*
+ ::: Lothar Matthäus
+-------------------------------------------------- */
+.loddar {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fda45c;
+  color: #fff;
+  text-align: right;
+  font-weight: 300;
+  text-shadow: -5px -5px 10px rgba(0,0,0,.15);
+}
+  .loddar p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .loddar cite {
+    margin-top: 1.5rem;
+    font-style: italic;
+  }
+@media only screen and (min-width : 40em) {
+  .loddar p {
+    font-size: 4rem;
+  }
+  .loddar cite {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+/*
+ :::  Giovanni Trappatoni
+-------------------------------------------------- */
+.trap {
+  font-family: 'Lora', serif;
+  background-color: #fff;
+}
+  .trap h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .trap .subheader {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .trap p {
+    line-height: 1.6;
+  }
+  .trap blockquote {
+    margin-top: 2rem;
+    position: relative;
+  }
+    .trap blockquote p {
+      margin-bottom: 1rem;
+    }
+@media only screen and (min-width : 40em) {
+  .trap h2 {
+    font-size: 3rem;
+  }
+  .trap .subheader {
+    font-size: 1.8rem;
+  }
+  .trap blockquote {
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance;
+    -webkit-column-rule: 1px dotted #444;
+    -moz-column-rule: 1px dotted #444;
+    column-rule: 1px dotted #444;
+    text-align: justify;
+  }
+}
+@media only screen and (min-width : 60em) {
+  .trap blockquote {
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+
+
+/*
+ :::  Paul Breitner
+-------------------------------------------------- */
+.breitner {
+  font-family: 'Ubuntu Mono', sans-serif;
+  background-color: #af7a95;
+  color: #fff;
+}
+  .breitner p {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+  .breitner cite {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: right;
+    font-style: italic;
+  }
+@media only screen and (min-width : 40em) {
+  .breitner p {
+    font-size: 3.4rem;
+  }
+  .breitner cite {
+    font-size: 2rem;
+  }
+}
+
+
+
+/*
+ :::  Béla Réthy
+-------------------------------------------------- */
+.rethy {
+  font-family: 'Economica', sans-serif;
+  background-color: #7a95af;
+  color: #fff;
+}
+  .rethy p {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  .rethy cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+@media only screen and (min-width : 40em) {
+  .rethy p {
+    font-size: 3rem;
+  }
+  .rethy cite {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/*
+ :::  Franz Beckenbauer
+-------------------------------------------------- */
+.kaiser {
+  font-family: 'Courgette', serif;
+  background-color: #fff;
+  text-align: center;
+}
+.kaiser .inner {
+  max-width: 45em;
+}
+  .kaiser p {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .kaiser cite {
+    margin-top: 2rem;
+  }
+@media only screen and (min-width : 40em) {
+  .kaiser p {
+    font-size: 3rem;
+  }
+  .kaiser cite {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+/*
+ :::  Michael Ballack
+-------------------------------------------------- */
+.ballack {
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1c2b7;
+  color: #fff;
+  text-align: center;
+}
+  .ballack p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 2rem;
+    background-color: rgba(0,0,0,.1);
+  }
+  .ballack cite {
+    font-weight: 100;
+    text-align: right;
+  }
+    .ballack cite span {
+      display: inline-block;
+      padding: 1rem;
+      margin-top: 1px;
+      background-color: rgba(0,0,0,.1);
+    }
+@media only screen and (min-width : 40em) {
+  .ballack p {
+    font-size: 5rem;
+  }
+  .ballack cite {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/*
+ ::: Jeff Strasser
+-------------------------------------------------- */
+.strasser {
+  font-family: 'Lato', sans-serif;
+  background-color: #9a5c5c;
+  color: #fff;
+  font-weight: 100;
+}
+  .strasser .inner {
+    max-width: 55em;
+  }
+  .strasser p {
+    font-size: 2.1rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+  .strasser cite {
+    font-size: 1.1rem;
+    text-align: right;
+  }
+@media only screen and (min-width : 40em) {
+  .strasser p {
+    font-size: 3.5rem;
+  }
+  .strasser cite {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/*
+ :::  Mario Basler
+-------------------------------------------------- */
+.basler {
+  font-family: 'Josefin Slab', serif;
+  background-color: #444;
+  color: #eee;
+}
+  .basler p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .basler cite {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+  }
+@media only screen and (min-width : 40em) {
+  .basler p {
+    font-size: 3.2rem;
+  }
+}
+
+
+
+/*
+ ::: Per Mertesacker
+-------------------------------------------------- */
+.merte {
+  font-family: 'Bitter', sans-serif;
+  background-color: #fdc65e;
+  color: #333;
+  text-align: center;
+}
+  .merte .inner {
+    max-width: 50em;
+  }
+  .merte .inner:before {
+    content: '★ ★ ★ ★';
+    position: relative;
+    padding: .5rem 1rem;
+    z-index: 2;
+    display: inline-block;
+    bottom: -1.5rem;
+    font-size: 2rem;
+    background-color: #fdc65e;
+  }
+  .merte p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-top: 2rem;
+    border-top: 3px solid #333;
+  }
+  .merte cite {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-top: 3px solid #333;
+  }
+    .merte cite span {
+      position: relative;
+      top: -.6em;
+      padding: .5rem 1rem;
+      background-color: #fdc65e;
+    }
+@media only screen and (min-width : 40em) {
+  .merte p {
+    font-size: 5rem;
+  }
+  .merte cite {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+/*
+ :::  Footer
+-------------------------------------------------- */
+.site-footer {
+  text-align: center;
+  font-size: 1rem;
+}
+  .site-footer p {
+    margin-top: 2rem;
+    line-height: 1.5;
+  }
+  .site-footer .inner {
+    padding: 6rem 1rem;
+  }
+    .site-footer p a {
+      color: inherit;
+    }
+    .site-footer p a:hover {
+      text-decoration: underline;
+    }
+
+
+
+/*
+ :::  Button
+-------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 1.1rem 4rem 1rem 4rem;
+  margin-bottom: 3rem;
+  background-color: #444;
+  color: #eee;
+  font-size: 1.2rem;
+  transition: background-color .3s ease-out, color .3s ease-out;
+}
+  .btn:hover {
+    color: #444;
+    background-color: #ccc;
+  }
+  .btn span {
+    display: block;
+    margin-top: .15em;
+    font-size: 3.5rem;
+  }
+
+
+
+/*
+ :::  Browserupdate
+-------------------------------------------------- */
+.browserupdate {
+  padding: 3em;
+  width: 100%;
+  background-color: #c43c20;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+}
+  .browserupdate a {
+    text-decoration: underline;
+  }
